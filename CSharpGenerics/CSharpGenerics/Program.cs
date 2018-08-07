@@ -10,6 +10,17 @@ namespace CSharpGenerics
     {
         static void Main(string[] args)
         {
+            Person person = new Person();
+            person.Name = "Aimal";
+
+            Program main = new Program();
+            Console.WriteLine(person.DisplayName(main.ActualDisplayImplementation));
+            Console.ReadLine();
+        }
+
+        public string ActualDisplayImplementation(Person person)
+        {
+            return person.Name;
         }
     }
 }

@@ -1,1 +1,6 @@
 E:\C#\CSharpGenerics\CSharpGenerics\bin\Debug\CSharpGenerics.exe.config
+E:\C#\CSharpGenerics\CSharpGenerics\bin\Debug\CSharpGenerics.exe
+E:\C#\CSharpGenerics\CSharpGenerics\bin\Debug\CSharpGenerics.pdb
+E:\C#\CSharpGenerics\CSharpGenerics\obj\Debug\CSharpGenerics.csprojResolveAssemblyReference.cache
+E:\C#\CSharpGenerics\CSharpGenerics\obj\Debug\CSharpGenerics.exe
+E:\C#\CSharpGenerics\CSharpGenerics\obj\Debug\CSharpGenerics.pdb
