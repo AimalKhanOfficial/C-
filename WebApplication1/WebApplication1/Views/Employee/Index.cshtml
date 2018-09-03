@@ -1,0 +1,58 @@
+﻿@model WebApplication1.Models.ViewModelLogin
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    @Html.LabelFor(a => a.Username)
+    <br/>
+    @Html.EditorFor(a => a.Username, new {@class = "form-control"})
+    <br/>
+    @Html.ValidationMessageFor(a => a.Username)
+    <br/>
+    @Html.LabelFor(a => a.Password)
+    <br/>
+    @Html.ValidationMessageFor(a => a.Password)
+    <br/>
+    @Html.EditorFor(a => a.Password, new {@class = "form-control"})
+    <br/>
+
+    @Html.DropDownListFor(a => a.Gender, new SelectList(ViewBag.Gender, "Value", "Text"))
+    <input id="save" type="submit" value="Login" class="btn btn-info"/>
+}
+
+@Html.Partial("_SomePage")
+
+
+@section aimalkhan {
+    <h1>Yo bro look at me i'm the man!</h1>
+}
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+    $(function() {
+
+        var obj = {
+            Username: $("#Username").val(),
+            Password: $("#Password").val()
+        }
+        $("#savasde").click(function() {
+            $.post("http://localhost:49849/Employee", {
+                data: {
+                    vmLogin : obj
+                }
+            }).done(function() {
+                alert("Done");
+            }).error(function() {
+                alert("Error");
+            }).always(function() {
+                console.log("Always!");
+            });
+        });
+    });
+</script>
