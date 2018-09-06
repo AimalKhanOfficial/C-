@@ -17,11 +17,19 @@ namespace ConsoleApplication1
         {
             Program myProgRef = new Program();
             string reversed = myProgRef.ReverseString("abc");
+            Console.WriteLine(reversed);
             Console.ReadLine();
         }
 
         public String ReverseString(String myString)
         {
+//            if (myString.Length <= 0)
+//            {
+//                return myString;
+//            }
+//
+//            return ReverseString(myString.Substring(1)) + myString[0];
+
             if (myPointer == 0)
             {
                 return "";
@@ -34,7 +42,7 @@ namespace ConsoleApplication1
                 myPointer = arr.Length;
             }
 
-            myPointer--;
+            //myPointer--;
             finalString += arr[myPointer] + "";
             ReverseString(arr[myPointer] + "");
 
