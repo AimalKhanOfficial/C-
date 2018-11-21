@@ -20,6 +20,7 @@ namespace AutofactDI.Controllers
         public ActionResult Index()
         {
             //IPerson person= new PersonRepository();
+
             var data = personRepo.GetAllPerson();
             ViewBag.somePerson = data;
             return View();
